@@ -90,7 +90,7 @@ public class RewriteRequestDemoFilter implements
         /*
          * If the conf you configured is of type json, you can convert it to Map or json.
          */
-        System.out.println("BRUH123");
+        System.out.println("RewriteRequestDemoFilter");
         String configStr = request.getConfig(this);
         Gson gson = new Gson();
         Map<String, Object> conf = new HashMap<>();
@@ -118,8 +118,6 @@ public class RewriteRequestDemoFilter implements
         String remoteAddr = request.getVars("remote_addr");
         String serverPort = request.getVars("server_port");
         String body = request.getBody();
-
-        System.out.println("BRUH");
 
         chain.filter(request, response);
     }
